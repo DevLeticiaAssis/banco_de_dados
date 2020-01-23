@@ -1,21 +1,68 @@
-select nome, idade from tb_alunos where idade > 18;
+//site para entender a ordem comos os comandos devem ser dados
+https://docs.microsoft.com/en-us/sql/t-sql/queries/select-transact-sql?view=sql-server-ver15
 
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+  
+[ WITH <common_table_expression> [ ,...n ] ]  
+SELECT <select_criteria>  
+[;]  
+  
+<select_criteria> ::=  
+    [ TOP ( top_expression ) ]   
+    [ ALL | DISTINCT ]   
+    { * | column_name | expression } [ ,...n ]   
+    [ FROM { table_source } [ ,...n ] ]  
+    [ WHERE <search_condition> ]   
+    [ GROUP BY <group_by_clause> ]   
+    [ HAVING <search_condition> ]   
+    [ ORDER BY <order_by_expression> ]  
+    [ OPTION ( <query_option> [ ,...n ] ) ]  
+
+//selecionar todos os maiores idade (nome e idade)
+select nome, idade from tb_alunos where idade >= 18;
+
+//selecionar todos os que são menores de idade  (nome e idade)
 select nome, idade from tb_alunos where idade < 18;
 
-select nome, interesse from tb_alunos 
+//selecionar todos os que são maiores que 40 anos e tem interesse por Esporte e Jogos
+select nome, idade, interesse 
+from tb_alunos 
 inner join tb_interesse 
 on tb_alunos.tb_interesse = tb_interesse.id 
-where (idade > 40 and (interesse = 'esporte' or interesse = 'jogos'));
+where (idade > 40 and (interesse = 'esporte' or interesse = 'jogos'))
+order by idade;
 
-select nome, interesse from tb_alunos.id
+//selecionar todos os que são menores de 40 anos e tem interesse por Informatica e Saude
+select nome, idade, interesse 
+from tb_alunos.id
 inner join tb_interesse
 on tb_alunos.tb_interesse = tb_interesse.id
-where (idade < 40 and (interesse = 'informatica' or interesse = 'saude'));
+where (idade < 40 and (interesse = 'informatica' or interesse = 'saude'))
+order by idade;
 
-select nome, interesse, estado, idade from tb_alunos
+//Selecionar todos os que são tem entre 19 e 32 anos são de BA e SP e tem imteresse por Musica e Jogos
+select nome, interesse, estado, idade 
+from tb_alunos
 inner join tb_interesse
 on tb_alunos.tb_interesse = tb_interesse.id
+//esse tb_interesse é um atributo q está dentro de tb_alunos. Portanto não é outra tabela
+//no caso de tb_interesse.id já é outra tabela. Ele equivale a chave primaria em tb_interesse e é a chave estrangeira em de tb_alunos
 inner join tb_estado
 on tb_alunos.tb_estado = tb_estado.id
-where((idade > 19 and idade < 31) and (estado = 'ba' or estado = 'sp') and (interesse = 'musica' or interesse = 'jogos')) 
+//acontece o mesmo q os comentarios anteriores
+where((idade > 19 and idade < 32) and (estado = 'ba' or estado = 'sp') and (interesse = 'musica' or interesse = 'jogos')) 
+
+//Selecionar todos os que são tem entre 19 e 32 anos são de RR e DF e tem imteresse por Saude e Informatica
+select nome, idade, estado, interesse
+from tb_alunos
+inner join tb_estado
+on tb_alunos.tb_estado = tb_estado.id
+inner join tb_interesse
+on tb_alunos.tb_interesse = tb_interesse.id
+where ((idade >=19 and idade <=32) and (estado= 'RR' or estado= 'DF') and (interesse= 'saúde' or interesse= 'informatica'))
+order by idade;
+
+//Desafio Final: Trazer quantidade de pessoas por estado (auxilio de documentação)
+
+//Desafio Final: Trazer quantidade de pessoa por interesse (auxilio de documentação)
 
