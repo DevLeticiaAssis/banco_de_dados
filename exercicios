@@ -1,0 +1,21 @@
+select nome, idade from tb_alunos where idade > 18;
+
+select nome, idade from tb_alunos where idade < 18;
+
+select nome, interesse from tb_alunos 
+inner join tb_interesse 
+on tb_alunos.tb_interesse = tb_interesse.id 
+where (idade > 40 and (interesse = 'esporte' or interesse = 'jogos'));
+
+select nome, interesse from tb_alunos.id
+inner join tb_interesse
+on tb_alunos.tb_interesse = tb_interesse.id
+where (idade < 40 and (interesse = 'informatica' or interesse = 'saude'));
+
+select nome, interesse, estado, idade from tb_alunos
+inner join tb_interesse
+on tb_alunos.tb_interesse = tb_interesse.id
+inner join tb_estado
+on tb_alunos.tb_estado = tb_estado.id
+where((idade > 19 and idade < 31) and (estado = 'ba' or estado = 'sp') and (interesse = 'musica' or interesse = 'jogos')) 
+
