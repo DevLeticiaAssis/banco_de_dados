@@ -1,0 +1,174 @@
+  create database db_example;
+	use db_example;
+  //use é pra vc falar qual banco de dados q vc vai usar
+    
+  create table tb_estado(
+		id int primary key auto_increment,
+        estado varchar(4)
+   );
+        
+	create table tb_interesse(
+		id int primary key auto_increment,
+        interesse varchar(256)
+    );
+    
+	create table tb_alunos(
+		id int primary key auto_increment,
+        nome varchar(100),
+        idade int,
+        email varchar(255),
+        tb_estado int not null,
+        tb_interesse int not null,
+        foreign key(tb_estado) references tb_estado(id),
+        foreign key(tb_interesse) references tb_interesse(id)
+      );
+        
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('DF');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('SC');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('MA');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('RS');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('MS');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('BA');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('GO');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('PA');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('PR');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('PB');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('PE');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('MT');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('CE');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('AP');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('MG');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('AL');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('RN');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('ES');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('RO');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('RR');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('SE');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('SP');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('RJ');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('AM');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('SP');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('PI');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('TO');
+INSERT INTO `db_example`.`tb_estado` (`estado`) VALUES ('AC');
+
+
+
+INSERT INTO `db_example`.`tb_interesse` (`interesse`) VALUES ('Esporte');
+INSERT INTO `db_example`.`tb_interesse` (`interesse`) VALUES ('Jogos');
+INSERT INTO `db_example`.`tb_interesse` (`interesse`) VALUES ('Saúde');
+INSERT INTO `db_example`.`tb_interesse` (`interesse`) VALUES ('Informática');
+INSERT INTO `db_example`.`tb_interesse` (`interesse`) VALUES ('Música');
+
+
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Jorden",47,1,"vel.mauris.Integer@nec.net","1");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Lacey",59,2,"ligula.eu.enim@egetlaoreetposuere.com","2");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Lillith",48,3,"Curabitur@atvelitCras.org","3");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Zephania",63,3,"erat.vitae@loremtristiquealiquet.net","4");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Scarlett",95,4,"facilisis.Suspendisse.commodo@placeratCrasdictum.org","5");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Nash",39,5,"Aliquam@Maurisquisturpis.org","6");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Indigo",62,4,"mus.Proin@laoreet.co.uk","7");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Bernard",77,1,"ut@Craspellentesque.net","8");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Cheyenne",78,5,"vel.pede@liberoduinec.co.uk","9");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Nerea",88,5,"non@facilisisvitae.edu","10");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Lucius",57,1,"eu.erat@interdum.ca","11");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Fallon",38,3,"risus@Etiamimperdietdictum.net","12");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Steven",35,5,"tellus@netus.org","13");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Paul",37,5,"sollicitudin.adipiscing@magnaCras.edu","7");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Bradley",31,5,"massa.Vestibulum@vitaesemperegestas.com","14");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Jeanette",46,4,"vitae@accumsannequeet.co.uk","15");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Craig",40,4,"magna.et.ipsum@tellusid.edu","5");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Maia",94,1,"ac@tempusnon.co.uk","10");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Harriet",16,2,"ante.ipsum@maurissitamet.com","16");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Finn",99,4,"metus.vitae@vitaerisusDuis.com","12");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Rafael",71,1,"adipiscing.elit.Etiam@vel.edu","15");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Cynthia",85,1,"Donec.nibh.Quisque@Sed.org","17");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Evelyn",13,4,"lacus.Aliquam.rutrum@etrutrumeu.edu","3");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Sybil",39,3,"semper@nuncsed.com","18");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Uriel",10,1,"semper.pretium.neque@eumetusIn.ca","10");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Dakota",99,1,"ipsum@etrutrumnon.co.uk","10");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Stewart",31,3,"natoque.penatibus.et@inhendrerit.org","13");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Cruz",96,3,"Cum.sociis.natoque@elementumloremut.org","4");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Kadeem",57,4,"consectetuer@faucibusleoin.net","5");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Wyatt",36,5,"feugiat.non@dolorsitamet.net","2");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Griffith",28,2,"Lorem@elementumsem.com","19");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Yvette",39,3,"mauris@dignissim.com","19");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Burton",14,1,"leo.elementum.sem@arcuVestibulumante.edu","2");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Tatum",4,3,"eget.lacus@nequeInornare.com","8");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Graham",88,4,"ac@necurna.com","18");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Aretha",37,1,"malesuada.augue@Nunc.com","18");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Sloane",5,3,"parturient@purusMaecenaslibero.net","13");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Uriel",81,3,"Praesent.interdum@enimnon.net","16");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Cameran",61,1,"sem.consequat@senectus.com","9");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Chiquita",8,2,"nisl.Quisque@utodio.co.uk","3");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Tanek",40,1,"nonummy@lectusNullamsuscipit.org","16");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Bruno",3,2,"semper.Nam@atpretium.ca","1");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Winter",14,2,"Quisque.nonummy@dolorNulla.ca","4");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Jacob",82,5,"nec.eleifend.non@sapien.ca","20");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Kuame",98,1,"placerat@ametorci.ca","9");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Orli",74,3,"eu.erat.semper@dolorsitamet.co.uk","18");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Amber",24,4,"eleifend.non@quamvelsapien.org","16");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Roary",77,3,"quis.pede.Suspendisse@Duisa.com","21");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Octavius",28,2,"euismod.in.dolor@posuere.edu","8");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Isabella",54,4,"eu@euarcuMorbi.ca","20");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Driscoll",70,4,"sem@malesuada.com","22");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Brendan",45,4,"arcu.et.pede@magna.com","2");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Quon",18,4,"elit@adipiscingnon.org","14");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Rajah",48,4,"magna.tellus@Quisquefringilla.org","23");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Lewis",32,4,"faucibus@vulputate.com","8");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Ronan",34,1,"tellus.non@eleifend.com","13");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Baxter",72,1,"enim.sit@urnanec.ca","1");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Kyla",6,1,"facilisis.eget@sociosquadlitora.net","24");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Ava",54,2,"velit@acmattis.edu","17");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Leonard",59,5,"fermentum.arcu@consequatenim.ca","5");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Byron",17,5,"Pellentesque.habitant.morbi@sapienNunc.edu","12");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Roary",52,2,"nec.eleifend.non@velvenenatis.org","7");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Amery",89,4,"mauris.aliquam.eu@Proindolor.net","8");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Adele",40,3,"scelerisque@velvenenatisvel.com","20");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Ronan",14,3,"posuere.cubilia@Donecnonjusto.co.uk","23");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Marny",53,3,"convallis.in.cursus@blanditatnisi.com","8");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Camden",31,5,"magna@mauriseu.edu","23");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Yoko",13,5,"dolor@vehiculaet.com","24");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Ina",71,4,"gravida.sagittis@tempusscelerisquelorem.com","16");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Tyler",3,1,"Proin.dolor.Nulla@nascetur.org","25");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Destiny",19,3,"augue.id@elementum.edu","15");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Glenna",82,2,"dui@interdumligula.ca","14");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Buffy",55,1,"dictum.eu@placeratvelitQuisque.net","3");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Hashim",27,5,"est.congue@enim.org","3");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Hiram",67,3,"nunc.sit.amet@nibhPhasellus.co.uk","17");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Kenneth",50,1,"a.nunc.In@Integermollis.edu","16");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Ariel",9,2,"Etiam.vestibulum.massa@egestas.edu","8");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Barrett",24,4,"fringilla.mi@liberoIntegerin.com","8");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Kato",25,5,"cursus.in.hendrerit@eu.org","6");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Lance",50,3,"Nullam@necurna.net","13");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Porter",50,2,"ultrices.mauris@nequesed.org","8");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Zeus",26,4,"hymenaeos@Integereu.net","20");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Oleg",36,4,"Nam@morbitristiquesenectus.ca","16");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Erin",25,3,"ligula@Nullam.edu","26");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Wade",61,1,"odio.Aliquam.vulputate@egestas.edu","5");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Ross",92,5,"tortor.at.risus@ac.edu","1");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Martina",24,5,"Cras@lacusAliquam.com","5");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Rowan",75,3,"erat@afelisullamcorper.com","19");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Aristotle",22,1,"at.auctor@Utnecurna.net","25");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Bernard",24,3,"placerat.orci.lacus@vitaesemperegestas.edu","23");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Teegan",9,5,"id@Fuscealiquam.co.uk","1");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Graiden",7,2,"ante.dictum@nibhAliquam.co.uk","16");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Alec",50,5,"vestibulum.neque.sed@nislQuisque.co.uk","11");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Savannah",61,2,"odio.a.purus@nequeSedeget.co.uk","18");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Rafael",45,4,"a@dolorsit.net","10");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Clementine",32,3,"dictum@Aliquamerat.edu","4");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Tasha",53,1,"in@justoProin.co.uk","27");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Hector",83,5,"Class.aptent@et.co.uk","24");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Tara",95,2,"Donec.porttitor.tellus@nonfeugiat.co.uk","1");
+INSERT INTO `tb_alunos` (`nome`,`idade`,`tb_interesse`,`email`,`tb_estado`) VALUES ("Charissa",50,4,"orci@elementumduiquis.ca","14");
+
+//para fazer a idade aparecer em ordem decrescente
+select*from tb_alunos order by idade desc;
+
+//para fazer a pesquisa dos alunos com determinada letra 
+select*from tb_alunos where nome like "J%";
+select*from tb_alunos where nome like "%J%";
+select*from tb_alunos where nome like "%J";
+
+//INNER JOIN
+
