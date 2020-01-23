@@ -1,2 +1,32 @@
-create database meu_banco;
+create database meu_banco (colocar aqui o nome do arquivo);
 //criação de nova query
+
+//criação de tabela
+create table aluno (
+id int,
+nome varchar(100), // varchar é para colocar texto e dentro dos () colocar a qtd de caracteres
+matriculado bit, // (0:verdadeiro / 1:falso)
+sexo char // char - caractere
+);
+
+//para inserir dados no banco
+insert into meu_banco.aluno (aluno.id, aluno.nome, aluno.matriculado, aluno.sexo) values (0,"Letícia", 0, "F"); //essa maneira é a menos resumida
+
+//para ver se os dados foram inseridos
+select meu_banco.aluno.nome, meu_banco.aluno.id from meu_banco.aluno;
+
+//para ver tudo
+select*from meu_banco;
+
+//para alterar alguma coisa
+uptade aluno set nome="Letícia Assis" where id=1;
+
+//deletar -> CUIDADO!!! Dados raramente devem ser apagados!!!
+delete from aluno where id=1;
+//qdo vc apagar esse id, ele nunca será substituído. Quando outra coisa for incluída vai entrar depois do ultimo id existente
+
+//Para que o ID seja incluído automaticamente:
+id int primary key auto-increment
+
+//maneira resumida
+insert into aluno (nome, matriculado,sexo) values ("Letícia", 0, "F");
