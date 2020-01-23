@@ -63,9 +63,14 @@ where ((idade >=19 and idade <=32) and (estado= 'RR' or estado= 'DF') and (inter
 order by idade;
 
 //Desafio Final: Trazer quantidade de pessoas por estado (auxilio de documentação)
-select tb_estado.estado, count(tb_estado.estado) as quantidade from tb_alunos
+select tb_estado.estado, count(tb_estado.estado) as quantidade 
+from tb_alunos
 inner join tb_estado on tb_estado.id = tb_alunos.tb_estado
 group by tb_estado.estado;
 
 //Desafio Final: Trazer quantidade de pessoa por interesse (auxilio de documentação)
+select tb_interesse.interesse, count(tb_interesse.interesse) as quantidade 
+from tb_alunos
+inner join tb_interesse on tb_interesse.id = tb_alunos.tb_interesse
+group by tb_interesse.interesse;
 
