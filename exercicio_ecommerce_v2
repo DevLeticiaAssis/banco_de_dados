@@ -1,0 +1,129 @@
+create database ecommerce_v2;
+
+create table Usuario(
+id int primary key, 
+nome varchar(100),
+usuario varchar(200),
+senha varchar(12)
+);
+
+create table telefone(
+id int primary key, 
+ddi int,
+ddd int,
+telefone int,
+idUsuario int,
+constraint fk_telefone_usuario foreign key (idUsuario) references usuario(id)
+);
+
+create table tipo_telefone(
+id int primary key, 
+nome varchar(200)
+);
+
+create table telefone_tipo_telefone(
+id int primary key, 
+idTelefone int,
+idTipoTelefone int
+);
+
+create table endereco(
+id int primary key, 
+logradouro varchar(255),
+numero int,
+bairro varchar(100),
+cidade varchar(100),
+cep int,
+uf varchar(100),
+idUsuario int,
+constraint fk_endereco_usuario foreign key (idUsuario) references usuario(id)
+);
+
+create table email(
+id int primary key, 
+email int,
+preferencial bool,
+idUsuario int,
+constraint fk_email_usuario foreign key (idUsuario) references usuario(id)
+);
+
+create table perfil(
+id int primary key, 
+nome varchar(200),
+idUsuario int,
+constraint fk_perfil_usuario foreign key (idUsuario) references usuario(id)
+);
+
+create table acesso_perfil(
+id int primary key, 
+idAcesso int,
+idPerfil int
+);
+
+create table acesso(
+id int primary key, 
+url varchar(200),
+descricao varchar(255)
+);
+
+
+create table carrinho(
+id int primary key, 
+qtd int,
+timeOut time,
+idUsuario int,
+constraint fk_carrinho_usuario foreign key (idUsuario) references usuario(id)
+);
+
+create table carrinho_produto(
+id int primary key, 
+idCarrinho int,
+idProduto int
+);
+
+create table vendas(
+id int primary key, 
+qtd int,
+dataVenda datetime,
+dataEntrega datetime,
+valorPago float,
+idEndereco int,
+constraint fk_vendas_endereco foreign key (idEndereco) references endereco(id),
+idUsuario int,
+constraint fk_vendas_usuario foreign key (idUsuario) references usuario(id)
+);
+
+create table produto(
+id int primary key, 
+nome varchar(100),
+descricao varchar(255),
+qtd int,
+lote int,
+valor float,
+codBarras int
+);
+
+create table detalhes(
+id int primary key, 
+nome varchar(200),
+valor float,
+idProduto int,
+constraint fk_detalhes_produto foreign key (idproduto) references produto(id)
+);
+
+create table categoria(
+id int primary key, 
+nome varchar(200),
+descricao varchar(255),
+idProduto int,
+constraint fk_detalhes_produto foreign key (idproduto) references produto(id)
+);
+
+create table vendas_produto(
+id int primary key, 
+idVendas int,
+idProdutos int
+);
+
+
+
