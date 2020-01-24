@@ -1,4 +1,6 @@
 create database ecommerce_v2;
+use ecommerce_v2;
+
 
 create table Usuario(
 id int primary key, 
@@ -24,7 +26,9 @@ nome varchar(200)
 create table telefone_tipo_telefone(
 id int primary key, 
 idTelefone int,
-idTipoTelefone int
+idTipoTelefone int,
+constraint fk_telefone_tipo_telefone_telefone foreign key (idTelefone) references telefone(id),
+constraint fk_telefone_tipo_telefone_tipo_telefone foreign key(idTipoTelefone) references tipo_telefone(id)
 );
 
 create table endereco(
@@ -54,16 +58,36 @@ idUsuario int,
 constraint fk_perfil_usuario foreign key (idUsuario) references usuario(id)
 );
 
-create table acesso_perfil(
-id int primary key, 
-idAcesso int,
-idPerfil int
-);
-
 create table acesso(
 id int primary key, 
 url varchar(200),
 descricao varchar(255)
+);
+
+create table acesso_perfil(
+id int primary key, 
+idAcesso int,
+idPerfil int,
+constraint fk_acesso_perfil_acesso foreign key (idAcesso) references acesso(id),
+constraint fk_acesso_perfil_perfil foreign key (idPerfil) references perfil(id)
+);
+
+create table categoria(
+id int primary key, 
+nome varchar(200),
+descricao varchar(255)
+);
+
+create table produto(
+id int primary key, 
+nome varchar(100),
+descricao varchar(255),
+qtd int,
+lote int,
+valor float,
+codBarras int,
+idcategoria int,
+constraint fk_produto_categoria foreign key (idcategoria) references categoria(id)
 );
 
 
@@ -78,7 +102,9 @@ constraint fk_carrinho_usuario foreign key (idUsuario) references usuario(id)
 create table carrinho_produto(
 id int primary key, 
 idCarrinho int,
-idProduto int
+idProduto int,
+constraint fk_carrinho_produto_carrinho foreign key (idCarrinho) references carrinho(id),
+constraint fk_carrinho_produto_produto foreign key (idProduto) references produto(id)
 );
 
 create table vendas(
@@ -93,15 +119,7 @@ idUsuario int,
 constraint fk_vendas_usuario foreign key (idUsuario) references usuario(id)
 );
 
-create table produto(
-id int primary key, 
-nome varchar(100),
-descricao varchar(255),
-qtd int,
-lote int,
-valor float,
-codBarras int
-);
+
 
 create table detalhes(
 id int primary key, 
@@ -111,18 +129,14 @@ idProduto int,
 constraint fk_detalhes_produto foreign key (idproduto) references produto(id)
 );
 
-create table categoria(
-id int primary key, 
-nome varchar(200),
-descricao varchar(255),
-idProduto int,
-constraint fk_detalhes_produto foreign key (idproduto) references produto(id)
-);
+
 
 create table vendas_produto(
 id int primary key, 
 idVendas int,
-idProdutos int
+idProduto int,
+constraint fk_vendas_produto_vendas foreign key (idVendas) references vendas(id),
+constraint fk_vendas_produto_produto foreign key (idProduto) references produto(id)
 );
 
 
