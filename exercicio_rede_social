@@ -1,0 +1,32 @@
+create database rede_social;
+
+create table Usuarios(
+id int primary key, 
+nome varchar(100),
+eMail varchar(200),
+senha varchar(12)
+);
+
+create table posts(
+id int primary key, 
+idUsuario int,
+titulo varchar(100),
+texto varchar(255),
+constraint fk_posts_usuario
+foreign key (idUsuario)
+references usuarios(id)
+);
+
+create table comentarios(
+id int primary key, 
+idUsuario int,
+idPost int,
+texto varchar(255),
+constraint fk_comentarios_usuario
+foreign key (idUsuario)
+references usuarios(id),
+constraint fk_comentarios_posts
+foreign key (idPost)
+references posts(id)
+);
+
