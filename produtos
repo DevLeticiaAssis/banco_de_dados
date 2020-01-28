@@ -1,76 +1,71 @@
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`) 
 VALUES ("Segura Esse Baphão Manteiga de Cupuaçu",
 "Produto 100% vegano, produzido com manteiga de Cupuaçu que proporciona maciez, Murumuru que recuperar a elasticidade e nutre peles secas e com rachaduras e Extrato de Umbu Cajá  que é rico em vitamina A e C, ele é altamente nutritivo e hidratante.",
-40,35.00,"Lola Cosmetics");
+40,35.00,"Lola Cosmetics",1);
 
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`) 
+VALUES ("Geléia Corporal Be(m)dita Praia",
+"Geléia pós-sol para todos os tipos de pele. Agradável perfume floral, com textura gel que proporciona uma sensação fresca. Sua composição conta com a presença da mica dourada, um mineral brilhante que promove luminosidade e deixa um aspecto radiante. Livre de derivados animais, um produto 100% vegano.",
+45,55.00,"Lola Cosmetics",2);
+
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`) 
 VALUES ("Segura Esse Xêro Absoluto de Rosas Lola Cosmetics Eau de Cologne",
 "Fragrância 100% vegana, suave com um leve adocicado, que combina o absoluto de rosas com os óleos essenciais de Sândalo, Benjoim e tangerina. Ideal para quem deseja aquela sensação de conforto e bem-estar logo após o banho.",
-32,48.00,"Lola Cosmetics");
+32,48.00,"Lola Cosmetics",3 );
 
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`) 
 VALUES ("Segura Essa Barra Extrato de Figo",
 "Remove as impurezas, enquanto deixa um delicioso perfume. Proporciona o máximo de cuidado, até mesmo para as peles mais sensíveis, graças à sua composição natural, livre de corantes, parabenos e gordura animal. Este produto é 100% vegano.",
-60,13.00,"Lola Cosmetics");
+60,13.00,"Lola Cosmetics",4);
 
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`)  
 VALUES ("Segura Esses Sais Ajuda Extra",
 "Sais de banho para todos os tipos de pele. Ótimo para quem deseja ter um banho relaxante e revigorante. Possui aroma que acalma o corpo e a mente. Além disso, também pode ser usado como esfoliante corporal ou para escalda pés. Produto é 100% vegano.",
-15,53.00,"Lola Cosmetics");
+15,53.00,"Lola Cosmetics",6);
 
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`) 
 VALUES ("Base líquida Linha Face",
 "Disponível em 6 cores, nossa base tem textura leve e aveludada para parecer o mais natural possível e se adequar com as suas necessidades. A textura fina facilita a aplicação, proporcionando maior aderência e durabilidade do produto. Além disso seus ingredientes naturais intensificam o pigmento e tem alto poder de nutrição e hidratação. Nada melhor do que associar maquiagem com um produto que auxilia os cuidados com a pele.",
-33,91.00,"Let Natur Makeup");
+33,91.00,"Let Natur Makeup",7);
 
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`) 
 VALUES ("Corretivo líquido Linha Eyes",
 "Textura suave que desliza facilmente na pele durante a aplicação. Sua formulação com óleo de buriti nutre e hidrata a área aplicada cobrindo instantaneamente a aparência roxeada das olheiras. Alta cobertura e iluminação.",
-100,60.00,"Let Natur Makeup");
+100,60.00,"Let Natur Makeup",8);
 
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`) 
 VALUES ("Delineador líquido Linha Eyes",
 "Produto bem pigmentado com um pincel preciso e fino. Esse delineador une precisão e ingredientes que previnem o envelhecimento precoce da pele, e por se tratar de um produto com ingredientes naturais não causa alergias comumente vista em outros produtos não naturais.",
-120,55.00,"Let Natur Makeup");
+120,55.00,"Let Natur Makeup",9);
 
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
-VALUES ("Delineador líquido Linha Eyes",
-"Produto bem pigmentado com um pincel preciso e fino. Esse delineador une precisão e ingredientes que previnem o envelhecimento precoce da pele, e por se tratar de um produto com ingredientes naturais não causa alergias comumente vista em outros produtos não naturais.",
-120,55.00,"Let Natur Makeup");
-
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`) 
 VALUES ("Iluminador Cremoso Diamond",
 "Uma textura acetinada que deixa a sua pele iluminada e um acabamento com durabilidade e polimento. Destaca o olhar, finaliza bem a maquiagem e os benefícios do óleo de açaí e da manteiga de cupuaçu, que previnem o envelhecimento e promovem hidratação, recuperando a maciez e elasticidade da pele.",
-26,53.00,"Let Natural Cosmetics");
+26,53.00,"Let Natural Cosmetics",10);
 
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`) 
 VALUES ("Máscara para cílios",
 "Produto com ingredientes 100% naturais conta com duas aberturas, uma de efeito mais leve, e outra com efeito mais volumoso. A ideia é que você cliente tenha a praticidade e a satisfação nas mãos. Sem falhas, a máscara proporciona o volume final perfeito e de acordo com os desejos das nossas clientes, variando apenas a forma de aplicação. Além disso, nossa máscara dá aos cílios definição e cuidados necessários.",
-150,50.00,"Let Natural Cosmetics");
+150,50.00,"Let Natural Cosmetics",11);
 
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`) 
 VALUES ("Kit Rebelde com causa",
 "Kit purificante para cabelos oleosos ou mistos, garante o controle da oleosidade com restauração de danos.Trata os fios e o couro cabeludo com uma delicada esfoliação que facilita a penetração dos nutrientes na fibra capilar. Também estimula a circulação sanguínea do couro cabeludo para regular a produção sebácea.",
-85,95.00,"Lola Cosmetics");
+85,95.00,"Lola Cosmetics",12);
 
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`) 
 VALUES ("Máscara de nutrição Inoar Vegan",
 "A máscara multiuso Vegan penetra fundo na fibra capilar e devolve aos fios sua umidade natural. Ela repara, realinha os fios, reduz frizz, define cachos e, com muito mais saúde, os fios brilham.Indicado para todos os tipos de cabelos.",
-36,18.90,"Inoar");
+36,18.90,"Inoar",14);
 
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
-VALUES ("Shampoo Inoar Vegan",
-"Penetra fundo na fibra capilar, limpando suavemente e deixando os fios saudáveis e brilhantes.",
-65,16.35,"Inoar");
-
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`) 
 VALUES ("Kit Inoar Herbal Solution Duo - Shampoo e Condicionador",
 "Kit de para todos os tipos de cabelos. Confere saúde e a beleza aos fios diariamente. Apresenta fórmulas à base de extrato de ervas. Pode ser usado inclusive em fios com química, já que oferece um cuidado diário eficaz e que não danifica a fibra capilar. É perfeito para manter a saúde, leveza e maciez do cabelo.",
-120,45.90,"Inoar");
+120,45.90,"Inoar",12);
 
-INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`) 
+INSERT INTO `tb_produto` (`nome`,`descricao`,`qtd_estoque`,`valor`,`marca`,`categoria`) 
 VALUES ("Shampoo Super Restauração Ômega 3 e Ômega 6",
 "O Shampoo Restauração Phytoervas com seu ativo Ômega 3 e Ômega 6, nutrientes que restauram e hidratam a fibra capilar, fazendo uma verdadeira nutrição nos cabelos. Para cabelos ressecados e sem-vida. Cabelos hidratados, macios e brilhantes.A Cosmética Integral Phytocomplex trabalha com a extração mais pura dos ativos da natureza, preservando os nutrientes essenciais, intensificando seus efeitos. Fórmula livre de ingredientes de origem animal. Produto não testado em animais. Cosmético Vegano.",
-150,13.90,"Phytoervas");
+150,13.90,"Phytoervas",13);
 
 
