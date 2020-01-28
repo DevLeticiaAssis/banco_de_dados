@@ -1,0 +1,15 @@
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Esfoliante");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Hidratante");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Perfume Feminino");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Sabonete em barra");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Sabonete líquido");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Sais de banho");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Base líquida");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Corretivo líquido");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Delineador líquido");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Iluminador");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Máscara para cílios");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Kit para cabelos");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Shampoo");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Máscara");
+INSERT INTO `tb_categoria` (`nome`) VALUES ("Condicionador");
